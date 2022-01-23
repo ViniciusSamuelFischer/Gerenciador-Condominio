@@ -102,11 +102,21 @@ public class DespesaController {
         System.out.println("\nDespesa salva com sucesso!");
     }
 
+    /**
+     * Pergunta ao usuário o novo id da unidade a ser inserido na despesa.
+     *
+     * @param despesa DespesaUnidade
+     */
     private static void perguntarIdUnidade(DespesaUnidade despesa) {
         System.out.print("\nCódigo da unidade: ");
         despesa.setUnidadeId(ler.nextInt());
     }
 
+    /**
+     * Pergunta ao usuário o novo status de pagamento a ser inserido na despesa.
+     *
+     * @param despesa DespesaUnidade
+     */
     private static void perguntarStatusPagamento(DespesaUnidade despesa) {
         System.out.println("\nDigite um número da opção para status do pagamento: ");
         System.out.println("1- Pendente");
@@ -124,6 +134,11 @@ public class DespesaController {
         }
     }
 
+    /**
+     * Pergunta ao usuário o novo vencimento da fatura a ser inserido na despesa.
+     *
+     * @param despesa DespesaUnidade
+     */
     private static void perguntarVencimentoFatura(DespesaUnidade despesa) {
         System.out.println("\nVencimento da fatura: ");
         System.out.print("Dia: ");
@@ -136,23 +151,41 @@ public class DespesaController {
         despesa.setVencimentoFatura(LocalDate.of(ano, mes, dia));
     }
 
+    /**
+     * Pergunta ao usuário o novo valor a ser inserido na despesa.
+     *
+     * @param despesa DespesaUnidade
+     */
     private static void perguntarValor(DespesaUnidade despesa) {
         System.out.print("\nValor: ");
         despesa.setValor(ler.nextDouble());
     }
 
+    /**
+     * Pergunta ao usuário o novo tipo de despesa a ser inserido na despesa.
+     *
+     * @param despesa DespesaUnidade
+     */
     private static void perguntarTipoDespesa(DespesaUnidade despesa) {
         System.out.print("\nTipo da despesa: ");
         ler = new Scanner(System.in);
         despesa.setTipoDespesa(ler.nextLine());
     }
 
+    /**
+     * Pergunta ao usuário a nova descrição a ser inserida na despesa.
+     *
+     * @param despesa DespesaUnidade
+     */
     private static void perguntarDescricao(DespesaUnidade despesa) {
         System.out.print("\nDescrição: ");
         ler = new Scanner(System.in);
         despesa.setDescricao(ler.nextLine());
     }
 
+    /**
+     * Altera uma despesa com base no que o usuário solicita.
+     */
     public static void editarDespesa() {
         System.out.println("\nEDIÇÃO DE DESPESA");
 
