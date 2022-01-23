@@ -4,11 +4,19 @@
 
 Esse sistema auxilia no cadastro e gestão dos inquilinos e unidades de um condomínio.
 
+**TECNOLOGIAS UTILIZADAS**
+
 A linguagem de programação utilizada foi Java.
 
 Eu modelei o banco de dados utilizando PostgreSQL, abaixo mais informações.
 Infelizmente não consegui implementar a tempo a conexão do sistema com o banco de dados.
 Implementei o que eu consegui estudando Java nessas duas semanas, onde tive o meu primeiro contato com programação.
+
+As classes do sistema estão distribuídas em pastas que atendem ao padrão MVC (model,view,controller).
+
+A criação das entidades no sistema foi feita com base no padrão de orientação a objetos.
+
+Todos os métodos foram documentados.
 
 **MODELAGEM DO BANCO DE DADOS**
 
