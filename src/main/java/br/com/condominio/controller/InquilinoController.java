@@ -5,9 +5,13 @@ import br.com.condominio.model.Inquilino;
 import static br.com.condominio.model.dao.Database.inquilinos;
 
 public class InquilinoController {
+
+    /**
+     * Imprime todos os inquilinos na lista inquilinos.
+     */
     public static void imprimirInquilinos() {
         System.out.println("\nINQUILINOS");
-        // para cada pessoa dentro da lista de pessoas
+
         for (Inquilino p : inquilinos) {
             System.out.println("\nInquilino: " + p.getNome());
             System.out.println("Código: " + p.getId());
