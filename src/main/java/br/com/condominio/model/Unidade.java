@@ -1,22 +1,11 @@
 package br.com.condominio.model;
 
-import java.util.List;
-
 public class Unidade {
     Integer id;
     String endereco;
     String complemento;
     String condominio;
     String proprietario;
-    List<DespesaUnidade> despesas;
-
-    public List<DespesaUnidade> getDespesas() {
-        return despesas;
-    }
-
-    public void setDespesas(List<DespesaUnidade> despesas) {
-        this.despesas = despesas;
-    }
 
     public String getEndereco() {
         return endereco;
@@ -33,7 +22,6 @@ public class Unidade {
     public void setProprietario(String proprietario) {
         this.proprietario = proprietario;
     }
-
 
     public Integer getId() {
         return id;

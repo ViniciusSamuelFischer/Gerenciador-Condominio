@@ -1,7 +1,5 @@
 package br.com.condominio.model;
 
-import java.util.List;
-
 public class Inquilino {
     Integer id;
     String nome;
@@ -9,15 +7,6 @@ public class Inquilino {
     String sexo;
     String telefone;
     String email;
-    List<Unidade> unidades;
-
-    public List<Unidade> getUnidades() {
-        return unidades;
-    }
-
-    public void setUnidades(List<Unidade> unidades) {
-        this.unidades = unidades;
-    }
 
     public Integer getId() {
         return id;

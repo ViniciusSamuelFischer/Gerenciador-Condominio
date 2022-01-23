@@ -1,5 +1,7 @@
 package br.com.condominio.model;
 
+import br.com.condominio.model.enums.StatusPagamento;
+
 import java.time.LocalDate;
 
 public class DespesaUnidade {
@@ -8,7 +10,7 @@ public class DespesaUnidade {
     String tipoDespesa;
     Double valor;
     LocalDate vencimentoFatura;
-    String statusPagamento;
+    StatusPagamento statusPagamento;
     Integer unidadeId;
 
     public Integer getId() {
@@ -51,11 +53,11 @@ public class DespesaUnidade {
         this.vencimentoFatura = vencimentoFatura;
     }
 
-    public String getStatusPagamento() {
+    public StatusPagamento getStatusPagamento() {
         return statusPagamento;
     }
 
-    public void setStatusPagamento(String statusPagamento) {
+    public void setStatusPagamento(StatusPagamento statusPagamento) {
         this.statusPagamento = statusPagamento;
     }
 

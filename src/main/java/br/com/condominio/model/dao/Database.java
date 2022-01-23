@@ -3,6 +3,7 @@ package br.com.condominio.model.dao;
 import br.com.condominio.model.DespesaUnidade;
 import br.com.condominio.model.Inquilino;
 import br.com.condominio.model.Unidade;
+import br.com.condominio.model.enums.StatusPagamento;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -22,7 +23,6 @@ public class Database {
         inquilino1.setTelefone("4733330839");
         inquilino1.setEmail("vinicius@gmail.com");
         inquilino1.setId(1);
-        inquilino1.setUnidades(new ArrayList<>());
 
         Inquilino inquilino2 = new Inquilino();
         inquilino2.setNome("Samuel");
@@ -31,7 +31,6 @@ public class Database {
         inquilino2.setTelefone("4733338039");
         inquilino2.setEmail("samuel@gmail.com");
         inquilino2.setId(2);
-        inquilino2.setUnidades(new ArrayList<>());
 
         inquilinos.add(inquilino1);
         inquilinos.add(inquilino2);
@@ -43,7 +42,6 @@ public class Database {
         unidade1.setComplemento("Ap 1");
         unidade1.setCondominio("Raiz");
         unidade1.setProprietario("Matheus");
-        unidade1.setDespesas(new ArrayList<>());
 
         Unidade unidade2 = new Unidade();
         unidade2.setId(6);
@@ -51,13 +49,9 @@ public class Database {
         unidade2.setComplemento("Ap 1");
         unidade2.setCondominio("Tronco");
         unidade2.setProprietario("Ricardo");
-        unidade2.setDespesas(new ArrayList<>());
 
         unidades.add(unidade1);
         unidades.add(unidade2);
-
-        inquilino1.getUnidades().add(unidade1);
-        inquilino2.getUnidades().add(unidade2);
 
         //Populando despesas das unidades
         DespesaUnidade despesa1 = new DespesaUnidade();
@@ -66,7 +60,7 @@ public class Database {
         despesa1.setTipoDespesa("Água");
         despesa1.setValor(60D);
         despesa1.setVencimentoFatura(LocalDate.of(2022,1,23));
-        despesa1.setStatusPagamento("Vencida");
+        despesa1.setStatusPagamento(StatusPagamento.VENCIDO);
         despesa1.setUnidadeId(5);
 
         DespesaUnidade despesa2 = new DespesaUnidade();
@@ -75,13 +69,11 @@ public class Database {
         despesa2.setTipoDespesa("Telefone");
         despesa2.setValor(90D);
         despesa2.setVencimentoFatura(LocalDate.of(2022,2,24));
-        despesa2.setStatusPagamento("Pago");
+        despesa2.setStatusPagamento(StatusPagamento.PAGO);
         despesa2.setUnidadeId(6);
 
         despesasUnidades.add(despesa1);
         despesasUnidades.add(despesa2);
 
-        unidade1.getDespesas().add(despesa1);
-        unidade2.getDespesas().add(despesa2);
     }
 }
